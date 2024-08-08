@@ -84,7 +84,6 @@ export class Users extends Model {
     cascade: true,
     onDelete: 'CASCADE',
   })
-  // @JoinTable()
   teams: ProjectTeam[];
 
   // @OneToMany(() => Review, (review) => review.assignTo)

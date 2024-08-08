@@ -15,11 +15,13 @@ import { ResourcesSalaryManagementModule } from './resources-salary-management/r
 import { ExpenseRateModule } from './expense-rate/expense-rate.module';
 import { AssetRequestModule } from './asset-request/asset-request.module';
 import { StripeUsersModule } from './stripe-users/stripe-users.module';
+import { MailerModule } from './mailer/mailer.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      
     }),
     TypeOrmModule.forRootAsync({
       useClass: TypeOrmConfigService,
@@ -34,6 +36,7 @@ import { StripeUsersModule } from './stripe-users/stripe-users.module';
     ExpenseRateModule,
     AssetRequestModule,
     StripeUsersModule,
+    MailerModule,
   ],
   controllers: [AppController],
   providers: [

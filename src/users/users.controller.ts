@@ -88,7 +88,6 @@ export class UsersController {
       type: String,
       required: false,
     },
-
   ])
   myResourcesTasks(
     @Query('search_text') search: string,

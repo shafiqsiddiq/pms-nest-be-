@@ -21,6 +21,11 @@ export class ProjectTeam {
 
   @ManyToMany(() => Users, (user) => user.teams)
   @JoinTable()
+  // @JoinTable({
+  //   name: 'project_team_members',
+  //   joinColumns: [{ name: 'team_id' }],
+  //   inverseJoinColumns: [{ name: 'user_id' }],
+  // })
   members: Users[];
 
 
